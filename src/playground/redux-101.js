@@ -1,5 +1,14 @@
 import { createStore} from 'redux';
 
+//We implicitly return an object using ({}) this is shorthand rather than using the return statement in functions i.e 
+
+// function incrementCount ({incrementBy = 1} = {}) {
+// 	return{
+// 		type:'INCREMENT',
+// 		incrementBy
+// 	}
+// }
+
 const incrementCount = ({ incrementBy = 1} = {}) => ({
 	type: 'INCREMENT',
 	incrementBy

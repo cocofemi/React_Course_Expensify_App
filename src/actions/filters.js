@@ -1,5 +1,5 @@
 export const setTextFilter = (text = '') => ({
-	type: 'FILTER_TEXT',
+	type: 'SET_TEXT_FILTER',
 	text
 });
 

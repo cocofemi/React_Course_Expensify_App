@@ -34,7 +34,7 @@ test('should generate sort by amount action object', () => {
 test('should generate set text filter action object with values', () => {
 	const action = setTextFilter('this should go through');
 	expect(action).toEqual({
-		type: 'FILTER_TEXT',
+		type: 'SET_TEXT_FILTER',
 		text: 'this should go through'
 	});
 });
@@ -42,7 +42,7 @@ test('should generate set text filter action object with values', () => {
 test('should generate set text filter action object with default', () => {
 	const action = setTextFilter();
 	expect(action).toEqual({
-		type: 'FILTER_TEXT',
+		type: 'SET_TEXT_FILTER',
 		text: ''
 	});
 });
