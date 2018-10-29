@@ -41,7 +41,7 @@ export { firebase, database as default};
 
 //     snapshot.forEach((childSnapshot) => {
 //         expenses.push({
-//           id: childSnapshot.key(),
+//           id: childSnapshot.key,
 //           ...childSnapshot.val()
 //         });
 //     });
