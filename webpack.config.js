@@ -59,6 +59,8 @@ module.exports = (env) => {
 		],
 		devtool: isProduction ? 'source-map' :'inline-source-map',
 		devServer: {
+			//contentbase runs the webpack devserver, serving all the files in the public folder
+			//historyApiFallback tells the api to serve up routes from the client especially 404 files
 			contentBase: path.join(__dirname, 'public'),
 			historyApiFallback: true,
 			publicPath: '/dist/'
