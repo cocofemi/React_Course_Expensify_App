@@ -58,6 +58,9 @@ const countReducer = ((state= {count: 0}, action) => {
 
 const store = createStore(countReducer);
 
+//store.suscribe helps to watch for changes in the state of the app..
+//store.unsuscribe helps to stop watching for changes to the state value..
+
 const unsubscribe = store.subscribe(() => {
 	console.log(store.getState());
 });
@@ -67,6 +70,8 @@ const unsubscribe = store.subscribe(() => {
 // 	type: 'INCREMENT',
 // 	incrementBy: 5
 // });
+
+//dispatch is a function that takes in an object and fires the actions that makes changes to the state value..
 store.dispatch(incrementCount({ incrementBy: 5}));
 
 store.dispatch(incrementCount());

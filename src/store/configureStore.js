@@ -5,6 +5,7 @@ import filterReducer from '../reducers/filters';
 import authReducer from '../reducers/auth';
 import incomeReducer from '../reducers/income';
 
+//settings for redux dev tools
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 export default () => {
