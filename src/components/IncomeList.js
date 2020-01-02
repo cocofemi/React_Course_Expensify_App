@@ -6,15 +6,15 @@ import IncomeListItem from './IncomeListItem'
 const IncomeList = (props) => (
 <div className="content-container">
 	<div className="list-header">
-			<div className="show-for-mobile">Expenses</div>
-			<div className="show-for-desktop">Expense</div>
-			<div className="show-for-desktop">Amount</div>
+			<div className="show-for-mobile"><h3>Income</h3></div>
+			<div className="show-for-desktop"><h3>Income</h3></div>
+			<div className="show-for-desktop"><h3>Amount</h3></div>
 	</div>
 	<div className="list-body">
 		{
 			props.incomes.length === 0 ? (
 				<div className="list-item list-item--message"> 
-					<span>No Incomes</span>
+					<span><h3>No Income</h3></span>
 				</div>
 				) : (
 					props.incomes.map((income) => {

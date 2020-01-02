@@ -2,24 +2,22 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { startLogout } from '../actions/auth';
+import { Navbar, Nav } from 'react-bootstrap';
 
 export const Header = ({ startLogout }) => (
-  <header className="header">
-  	<div className="content-container">
-  		<div className="header__content">
-		    <Link className="header__title" to="/dashboard" >
-		    	<h1>BudgetIt</h1>
-		    </Link>
-        <Link className="button button--link" to="/income">
-          <h3>Income</h3>
-        </Link>
-        <Link className="button button--link" to="/dashboard">
-          <h3>Expenses</h3>
-        </Link>
-		    <button className="button button--link" onClick={startLogout}>Logout</button>
-	    </div>
-    </div>
-  </header>
+  <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+  <Navbar.Brand href="/dashboard"><h1>budgetIt</h1></Navbar.Brand>
+  <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+  <Navbar.Collapse id="responsive-navbar-nav">
+    <Nav className="mr-auto">
+      <Nav.Link as={Link} to="/income" activeStyle={{color:"skyblue"}}><h2>Income</h2></Nav.Link>
+      <Nav.Link as={Link} to="/dashboard" activeClassName="active"><h2>Expenses</h2></Nav.Link>
+    </Nav>
+    <Nav>
+      <button className="button button--link" onClick={startLogout}><h2>Logout</h2></button>
+    </Nav>
+  </Navbar.Collapse>
+</Navbar>
 );
 
 const mapDispatchToProps = (dispatch) => ({

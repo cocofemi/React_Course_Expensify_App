@@ -22,6 +22,8 @@ export class ExpenseListFilters extends React.Component {
       this.props.sortByDate();
     } else if (e.target.value === 'amount') {
       this.props.sortByAmount();
+    }else if (e.target.value === 'sort') {
+      this.props.sortByDate();
     }
   };
   render() {
@@ -43,6 +45,7 @@ export class ExpenseListFilters extends React.Component {
               value={this.props.filters.sortBy}
               onChange={this.onSortChange}
             >
+              <option value="sort">Sort By</option>
               <option value="date">Date</option>
               <option value="amount">Amount</option>
             </select>

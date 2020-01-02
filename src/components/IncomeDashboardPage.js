@@ -5,7 +5,7 @@ import IncomeSummary from './IncomeSummary';
 import Header from './Header';
 
 const IncomeDashboardPage = () => (
-	<div>
+	<div className="dashboard-layout">
 		<Header />
 		<IncomeSummary />
 		<ExpenseListFilters 

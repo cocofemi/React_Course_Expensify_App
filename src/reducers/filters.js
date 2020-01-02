@@ -4,7 +4,7 @@ import uuid from 'uuid';
 
 const filtersReducerDefaultState = {
   text: '',
-  sortBy: 'date',
+  sortBy: 'Sort By',
   startDateId: uuid(),
   endDateId: uuid(),
   startDate: moment().startOf('month'),
