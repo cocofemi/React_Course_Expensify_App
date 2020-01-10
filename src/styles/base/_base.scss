@@ -21,6 +21,18 @@ button:disabled{
 	cursor: default;
 }
 
-.is-active{
-	font-weight: bold;
+.inactive {
+	color: grey;
+	text-decoration:none;
+}
+
+.navitem {
+	color: skyblue;
+	text-decoration: #fff;
+}
+
+.card-deck {
+	margin-right: 23px;
+    margin-left: 23px;
+    margin-top: 100px
 }

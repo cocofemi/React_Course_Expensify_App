@@ -10,8 +10,8 @@ export const Header = ({ startLogout }) => (
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="mr-auto">
-      <Nav.Link href="/income"><h2>Income</h2></Nav.Link>
-      <Nav.Link href="/dashboard"><h2>Expenses</h2></Nav.Link>
+      <Nav.Link as={Link} to="/income" className="navitem"><h2>Income</h2></Nav.Link>
+      <Nav.Link as={Link} to="/expenses" className="navitem"><h2>Expenses</h2></Nav.Link>
     </Nav>
     <Nav>
       <button className="button button--link" onClick={startLogout}><h2>Logout</h2></button>
